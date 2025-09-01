@@ -16,6 +16,8 @@ public class Matrices {
 
         //- Find the transpose of a matrix.
         //transposeOfAMatrix(matrix);
+
+        //- Multiply every element of a matrix by a given constant.
     }
 
     public static void readAndPrint ()
@@ -71,7 +73,7 @@ public class Matrices {
 
     public static void transposeOfAMatrix (int [][]matrix)
     {
-        int [][] tMat = new int [matrix.length][];
+        int [][] tMat = new int [matrix.length][matrix[0].length];
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
 
@@ -85,18 +87,8 @@ public class Matrices {
             }
             System.out.println();
         }
-
-        //matrix
-        //modif
-
-
-
-
     }
-    public static void clone()
-    {
 
-    }
 
 
 }

@@ -244,6 +244,6 @@ public class ArraysAndDataTypes {
 
     public static void modificare()
     {
-        
+
     }
 }

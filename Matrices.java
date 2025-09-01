@@ -86,5 +86,10 @@ public class Matrices {
             System.out.println();
         }
     }
+    public static void clone()
+    {
+
+    }
+
 
 }

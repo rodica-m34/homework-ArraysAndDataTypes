@@ -240,5 +240,7 @@ public class ArraysAndDataTypes {
         for (int i : arr) {
             System.out.print(i+ " ");
         }
+
+        //modificare
     }
 }

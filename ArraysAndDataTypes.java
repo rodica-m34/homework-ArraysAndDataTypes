@@ -24,7 +24,7 @@ public class ArraysAndDataTypes {
         //reverseArray();
 
         //- Merge two arrays of the same size into one (concatenation).
-        mergeArrays();
+        //mergeArrays();
 
         //- Find the second-largest element in an array.
         //secondLargestElement();

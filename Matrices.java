@@ -1,5 +1,6 @@
 package HomeWork;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Matrices {
@@ -18,6 +19,20 @@ public class Matrices {
         //transposeOfAMatrix(matrix);
 
         //- Multiply every element of a matrix by a given constant.
+        //multiplyElementsOfAMatrix(matrix, 2);
+
+        //- Add two matrices of the same size.
+        //int[][] matrix2 = new int[][] {{1, 2, 3}, {0, 1, 5}, {2, 5, 2}};
+        //addTwoMatrices(matrix, matrix2);
+
+        //- Multiply two matrices (basic algorithm).
+        //multiplyTwoMatrices(matrix, matrix2);
+
+        //- Check if a matrix is symmetric (equals its transpose).
+        /*int[][] matrix3 = new int[][] {{1, 1, 1}, {1, 1, 1}, {1, 1, 1}};
+        isSymmetric(matrix3);*/
+
+        //- Find the maximum element in a matrix and its position (row, column).
     }
 
     public static void readAndPrint ()
@@ -71,7 +86,7 @@ public class Matrices {
         System.out.println(sum1+ " "+sum2);
     }
 
-    public static void transposeOfAMatrix (int [][]matrix)
+    public static int [][] transposeOfAMatrix (int [][]matrix)
     {
         int [][] tMat = new int [matrix.length][matrix[0].length];
         for (int i = 0; i < matrix.length; i++) {
@@ -87,8 +102,75 @@ public class Matrices {
             }
             System.out.println();
         }
+        return tMat;
     }
 
+    public static void multiplyElementsOfAMatrix (int [][]matrix, int elem)
+    {
+        int [][] mMat = new int [matrix.length][matrix[0].length];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                mMat[i][j] = matrix[i][j]*elem;
+            }
+        }
+        for (int i = 0; i < mMat.length; i++) {
+            for (int j = 0; j < mMat[i].length; j++) {
+                System.out.print(mMat[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
 
+    public static void addTwoMatrices (int [][]matrix1, int [][]matrxi2)
+    {
+        int [][] newmat = new int [matrix1.length][matrix1[0].length];
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix1[i].length; j++) {
+                newmat[i][j] = matrix1[i][j]+matrxi2[i][j];
+            }
+        }
+        for (int i = 0; i < newmat.length; i++) {
+            for (int j = 0; j <newmat[i].length; j++) {
+                System.out.print(newmat[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void multiplyTwoMatrices (int[][] matrix1, int[][]matrix2)
+    {
+        int [][] mMat = new int [matrix1.length][matrix1[0].length];
+        for (int i = 0; i < matrix1.length; i++) {
+            for (int j = 0; j < matrix1[i].length; j++) {
+                mMat[i][j] = matrix1[i][j]*matrix2[i][j];
+            }
+        }
+        for (int i = 0; i < mMat.length; i++) {
+            for (int j = 0; j <mMat[i].length; j++) {
+                System.out.print(mMat[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void isSymmetric (int[][]matrix)
+    {
+        boolean isSymmetric=true;
+        int [][]tMat = transposeOfAMatrix(matrix);
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j]!=tMat[i][j]){
+                    isSymmetric=false;
+                }
+            }
+        }
+        if (isSymmetric)
+        {
+            System.out.println("is symmetric");
+        }
+        else {
+            System.out.println("not symmetric");
+        }
+    }
 
 }

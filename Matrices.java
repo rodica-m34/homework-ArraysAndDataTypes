@@ -22,7 +22,7 @@ public class Matrices {
         //multiplyElementsOfAMatrix(matrix, 2);
 
         //- Add two matrices of the same size.
-        //int[][] matrix2 = new int[][] {{1, 2, 3}, {0, 1, 5}, {2, 5, 2}};
+        int[][] matrix2 = new int[][] {{1, 2, 3}, {0, 1, 5}, {2, 7, 2}};
         //addTwoMatrices(matrix, matrix2);
 
         //- Multiply two matrices (basic algorithm).
@@ -33,6 +33,9 @@ public class Matrices {
         isSymmetric(matrix3);*/
 
         //- Find the maximum element in a matrix and its position (row, column).
+        //findMaxElement(matrix2);
+
+        //- Rotate a square matrix 90 degrees clockwise.
     }
 
     public static void readAndPrint ()
@@ -171,6 +174,22 @@ public class Matrices {
         else {
             System.out.println("not symmetric");
         }
+    }
+
+    public static void findMaxElement (int [][]matrix)
+    {
+        int max = matrix[0][0];
+        int row=0, col=0;
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                if (matrix[i][j]>max){
+                    max=matrix[i][j];
+                    row=i;
+                    col=j;
+                }
+            }
+        }
+        System.out.println("Max element is: " +max + " and its position is on row "+row+" and column "+col);
     }
 
 }

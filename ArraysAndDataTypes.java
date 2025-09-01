@@ -241,4 +241,9 @@ public class ArraysAndDataTypes {
             System.out.print(i+ " ");
         }
     }
+
+    public static void modificare()
+    {
+        
+    }
 }
